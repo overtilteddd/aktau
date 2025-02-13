@@ -1,0 +1,111 @@
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(17, 160, 119, 1);
+    width: 100%;
+    max-width: 200px; /* Чтобы карточки не растягивались слишком сильно */
+    min-width: 120px;
+}
+
+.card_image {
+    width: 100%;
+    max-width: 180px; /* Чтобы изображение не растягивалось слишком сильно */
+    height: auto;
+    max-height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card_price {
+    background-color: #333;
+    color: #fff;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+    text-align: center;
+    width: fit-content;
+}
+
+.card_price:hover {
+    background-color: #444;
+}
+
+.category-title {
+    text-align: center;
+    margin: 5px 0;
+    color: #fff;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.productLine {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+    gap: clamp(10px, 2vw, 25px);
+    justify-content: center; /* Центрирование карточек */
+    width: 100%;
+    padding: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productLine-container {
+    margin-top: 12vh;
+    min-height: 400px;
+    height: auto;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+/* Медиа-запросы для планшетов */
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 10px;
+        max-width: 180px;
+    }
+
+    .card_image {
+        max-height: 120px;
+    }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media screen and (max-width: 480px) {
+    .card {
+        padding: 8px;
+        max-width: 160px;
+    }
+
+    .card_image {
+        max-height: 100px;
+    }
+
+    .productLine {
+        justify-content: center; /* Центрируем карточки */
+        gap: 10px;
+    }
+
+    .card_price {
+        padding: 6px 10px;
+    }
+}
+
+/* Медиа-запросы для маленьких мобильных устройств */
+@media screen and (max-width: 320px) {
+    .card {
+        max-width: 140px;
+        min-width: 100px;
+    }
+
+    .productLine {
+        gap: 8px;
+    }
+}

@@ -1,0 +1,78 @@
+.menu {
+    background-color: rgba(17, 160, 119, 1);
+    padding: 0.5rem;
+    width: 100%;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+    -webkit-overflow-scrolling: touch; /* Плавная прокрутка на iOS */
+    margin-bottom: 1500px;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+
+.menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Изменено для корректной прокрутки */
+    flex-wrap: nowrap; /* Запрещаем перенос */
+    min-width: min-content; /* Гарантируем, что все элементы будут в одну строку */
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    flex-shrink: 0; /* Запрещаем сжатие элементов */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    box-sizing: border-box;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: rgba(17, 119, 92, 1);
+    outline: none;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .menu a {
+        padding: 0.5rem 0.75rem; /* Уменьшаем отступы */
+        font-size: 0.9rem; /* Уменьшаем размер шрифта */
+    }
+
+    .menu li {
+        margin: 0.25rem; /* Уменьшаем отступы между элементами */
+    }
+}
+
+/* Медиа-запросы для очень маленьких экранов */
+@media screen and (max-width: 320px) {
+    .menu a {
+        padding: 0.4rem 0.6rem; /* Ещё меньше отступы */
+        font-size: 0.8rem; /* Ещё меньше шрифт */
+    }
+
+    .menu li {
+        margin: 0.2rem; /* Минимальные отступы */
+    }
+}
