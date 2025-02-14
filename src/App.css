@@ -13,3 +13,13 @@ body {
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center;
 }
+
+.app-container.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.app-container.dark {
+  background-color: #222;
+  color: #fff;
+}

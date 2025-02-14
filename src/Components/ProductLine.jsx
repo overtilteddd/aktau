@@ -54,7 +54,7 @@ const ProductLine = () => {
     return (
         <div className="productLine-container">
             {Object.entries(productsByCategory).map(([categoryId, products]) => (
-                <div key={categoryId} className="category-section">
+                <div key={categoryId} className="category-section" id={`category-${categoryId}`}>
                     <h3 className="category-title">
                         {categories[categoryId] || `Категория ${categoryId}`}
                     </h3>

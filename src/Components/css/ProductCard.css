@@ -73,7 +73,7 @@
     }
 
     .card_image {
-        max-height: 120px;
+        max-height: 25vh;
     }
 }
 
@@ -85,7 +85,7 @@
     }
 
     .card_image {
-        max-height: 100px;
+        height: 35vh;
     }
 
     .productLine {
